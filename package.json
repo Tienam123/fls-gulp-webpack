@@ -2,29 +2,30 @@
   "name": "fls-start",
   "version": "3.0.0",
   "description": "Start template with Gulp and Webpack",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
-  "author": "FLS",
+  "homepage": "https://github.com/Tienam123/fls-gulp-webpack/",
+  "author": "Vladyslav Honchar <vladyslav.honchar1990@gmail.com>",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
     "build": "gulp build --build",
+    "postbuild": "gh-pages -d dist",
     "sprite": "gulp sprite",
     "fonts": "gulp fonts --rewrite",
     "deploy": "gulp deployFTP --build",
     "zip": "gulp deployZIP --build",
     "devbuild": "gulp build --build --nowebp",
+	 "postdevbuild": "gh-pages -d dist",
     "tmp": "gulp -f gulpfile.tmp.js",
     "bem": "fls-bemtree-from-html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/Tienam123/fls-gulp-webpack.git"
   },
   "keywords": [],
-  "author": "Vladyslav Honchar <vladyslav.honchar1990@gmail.com>",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/Tienam123/fls-gulp-webpack/issues"
   },
   "devDependencies": {
     "copy-webpack-plugin": "latest",
@@ -32,6 +33,7 @@
     "del": "^6.1.1",
     "file-include-webpack-plugin-replace": "latest",
     "fls-bemtree-from-html": "^1.0.0",
+    "gh-pages": "^6.0.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
